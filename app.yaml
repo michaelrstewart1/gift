@@ -1,8 +1,8 @@
 application: manage-gifts
 version: 1
-runtime: php71
+runtime: php55
 api_version: 1
 
 handlers:
-- url: /.index.php
+- url: /.*
   script: index.php
