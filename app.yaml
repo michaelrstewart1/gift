@@ -1,7 +1,9 @@
-application: manage-gifts
-version: 1
 runtime: php55
 api_version: 1
+
+skip_files:
+- ^.*node_modules(/.*)?
+- .git
 
 handlers:
 # Serve PHP
