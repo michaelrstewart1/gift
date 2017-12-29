@@ -4,11 +4,6 @@
 		<meta charset="utf-8">
 		<title>Gift</title>
 
-		<!-- STYLING -->
-		<link rel="stylesheet" href="dist/tether.css">
-		<link rel="stylesheet" href="dist/bootstrap.css">
-		<link rel="stylesheet" href="dist/app.css">
-
 		<!-- JAVASCRIPT -->
 		<script type="text/javascript" language="javascript" src="js/external/jquery.dev.min.js"></script>
 		<!-- <script type="text/javascript" language="javascript" src="js/external/jquery.prod.min.js"></script> -->
@@ -16,6 +11,15 @@
 		<script type="text/javascript" language="javascript" src="js/external/vue.dev.min.js"></script>
 		<!-- <script type="text/javascript" language="javascript" src="js/external/vue.prod.min.js"></script> -->
 		<script type="text/javascript" language="javascript" src="js/bootstrap/bootstrap.js"></script>
+
+
+		<!-- STYLING -->
+		<link rel="stylesheet" href="css/tether.css">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/app.css">
+		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type='text/css'>
+
 	</head>
 	<body>
 		<div id="app"></div>

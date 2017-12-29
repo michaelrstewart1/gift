@@ -1,10 +1,14 @@
 <template>
-	<div>
-		<span>Yeah, it works.</span>
+	<div id="main">
+		<top-menu></top-menu>
+		<left-menu></left-menu>	
 	</div>
 </template>
 
 <script>
+	import TopMenu from './TopMenu'
+	import LeftMenu from './LeftMenu'
+
 	export default {
 		props: {
 	
@@ -27,7 +31,8 @@
 	
 		},
 		components: {
-	
+			TopMenu,
+			LeftMenu,
 		}
 	}
 </script>

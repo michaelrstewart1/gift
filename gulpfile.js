@@ -24,7 +24,7 @@ gulp.task('sass', () => {
 		.pipe(sass().on('error', sass.logError))
 		.pipe(prefix())
 		.pipe(minify())
-		.pipe(gulp.dest('./dist/'))
+		.pipe(gulp.dest('/srv/gift/css/'))
 })
 
 
@@ -41,7 +41,7 @@ gulp.task('webpack', function(){
 
 // Default task
 gulp.task('default', function(){
-  gulp.watch('sass/**/*.scss', ['sass'])
+  gulp.watch('sass/*.scss', ['sass'])
   gulp.watch('vue/**/*.{js,vue}', ['webpack'])
 });
 
