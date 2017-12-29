@@ -1,9 +1,6 @@
 // entry point file
-import Vue from 'vue'
+import Vue from 'vue/dist/vue.esm.js'
 import App from '../vue/components/Main/Main'
 
-new Vue({
-	el: 'body',
-	render : ( createElement ) => createElement(app),
-})
+new Vue(App).$mount('#app');
 

@@ -31,7 +31,7 @@ module.exports =  {
 		modules: [projectRoot + '/vue', projectModules],
 		extensions: ['js', '.js', '.vue'],
 		alias: {
-			
+			'vue$': 'vue/dist/vue.common.js',
 		}
 	}
 }

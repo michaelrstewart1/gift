@@ -4,5 +4,18 @@ runtime: php55
 api_version: 1
 
 handlers:
-- url: /.*
-  script: index.php
+# Serve PHP
+- url: /(.+\.php)$
+  script: \1
+
+# Serve JS
+- url: /(.+\.js)$
+  script: \1
+
+# Serve CSS
+- url: /(.+\.css)$
+  script: \1
+
+# Default
+- url: /
+  script: /index.php
