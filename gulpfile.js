@@ -24,7 +24,7 @@ gulp.task('sass', () => {
 		.pipe(sass().on('error', sass.logError))
 		.pipe(prefix())
 		.pipe(minify())
-		.pipe(gulp.dest('./css/'))
+		.pipe(gulp.dest('/srv/gift/css/'))
 })
 
 
