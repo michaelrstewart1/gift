@@ -15,7 +15,6 @@
 		},
 		data: function() {
 			return {
-				test_var: 1,
 			}
 		},
 		ready: function() {

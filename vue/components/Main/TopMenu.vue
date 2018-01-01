@@ -3,14 +3,14 @@
 		<div id="main_navigation_menu">
 			<div id="main_navigation_dropdown">
 				<div id="main_navigation_dropdown_button"></div>
-				<i id="main_navigation_dropdown_menu_icon" data-toggle="tooltip" title="Menu" class="material-icons">menu</i>
+				<i id="main_navigation_dropdown_menu_icon" data-toggle="tooltip" title="Menu" class="material-icons uneditable">menu</i>
 			</div>
-			<div id="site_name_wrapper" class="page-header">
+			<div id="site_name_wrapper" class="page-header uneditable">
 				<h1>Gifts<small> Stay Organized</small></h1>
 			</div>
 		</div>
 		<div id="user_menu">
-			<i id="user_menu_icon" data-toggle="tooltip" title="User Menu" class="material-icons">face</i>
+			<i id="user_menu_icon" data-toggle="tooltip" title="User Menu" class="material-icons uneditable">face</i>
 		</div>
         </div>
 </template>
