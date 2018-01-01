@@ -1,6 +1,6 @@
 <template>
         <div id="left_menu">
-		<div v-for="MenuOption in this.MenuOptions" class="clickable" :class="[{'selected': (SelectedMenu == MenuOption.value)}]" @click="SelectMenu(MenuOption)">
+		<div v-for="MenuOption in this.MenuOptions" class="clickable" :class="[{'selected': (LeftMenuSelected == MenuOption.value)}]" @click="SelectMenu(MenuOption)">
 			<i class="material-icons uneditable">{{MenuOption.icon}}</i>
 			<span class="uneditable">{{MenuOption.title}}</span>
 		</div>
@@ -9,7 +9,17 @@
 <script>
         export default {
                 props: {
-
+                        ContentMode: {
+                                type: String,
+                        },
+			LeftMenuSelected: {
+				type: String,
+				required: true,
+			},
+			SetLeftMenuSelected: {
+				type: Function,
+				required: true,
+			}
                 },
                 data: function() {
                         return {
@@ -17,7 +27,7 @@
                                         'home': {
                                                 title: 'Home',
                                                 value: 'home',
-                                                icon: 'weekend',
+                                                icon: 'home',
                                         },
                                         'orders': {
                                                 title: 'Orders',
@@ -40,22 +50,26 @@
                                                 icon: 'local_library',
                                         },
                                 },
-				SelectedMenu: 'home',
 			}
                 },
                 ready: function() {
+
                 },
                 created: function() {
+
                 },
                 computed: {
+
                 },
                 methods: {
 			SelectMenu: function(menu) {
 				if (!menu) return;
-				this.SelectedMenu = menu.value;
+				var NewVal = menu.value;
+				this.SetLeftMenuSelected(NewVal);
 			},
                 },
                 components: {
+
                 }
         }
 </script>
