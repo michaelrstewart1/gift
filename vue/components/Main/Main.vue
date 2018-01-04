@@ -1,8 +1,11 @@
 <template>
 	<div id="main">
-		<top-menu :content-mode="ContentMode" :left-menu-selected="LeftMenuSelected" :set-left-menu-selected="SetLeftMenuSelected"></top-menu>
-		<left-menu :content-mode="ContentMode" :left-menu-selected="LeftMenuSelected" :set-left-menu-selected="SetLeftMenuSelected"></left-menu>	
-		<main-content :content-mode="ContentMode" :left-menu-selected="LeftMenuSelected" :set-left-menu-selected="SetLeftMenuSelected"></main-content>
+		<top-menu :content-mode="ContentMode" :left-menu-selected="LeftMenuSelected" :set-left-menu-selected="SetLeftMenuSelected" v-if="1==2"></top-menu>
+		<left-menu :content-mode="ContentMode" :left-menu-selected="LeftMenuSelected" :set-left-menu-selected="SetLeftMenuSelected" v-if="1==2"></left-menu>	
+		<main-content :content-mode="ContentMode" :left-menu-selected="LeftMenuSelected" :set-left-menu-selected="SetLeftMenuSelected" v-if="1==2"></main-content>
+		<landing v-if="1==1"></landing>
+		<signup v-if="1==2"></signup>
+		<signin v-if="1==2"></signin>
 	</div>
 </template>
 
@@ -10,6 +13,9 @@
 	import TopMenu from './TopMenu'
 	import LeftMenu from './LeftMenu'
 	import MainContent from './Content'
+	import Landing from './Landing'
+	import Signin from './Signin'
+	import Signup from './Signup'
 
 	export default {
 		props: {
@@ -25,13 +31,16 @@
 			}
 		},
 		ready: function() {
-			//this.ContentMode = this.LeftMenuSelected;
+
 		},
 		created: function() {
 			this.ContentMode = this.LeftMenuSelected;
 		},
+		firebase: {
+			users: usersRef
+		},
 		computed: {
-	
+			
 		},
 		watch: {
 			LeftMenuSelected: function() {
@@ -52,6 +61,9 @@
 			TopMenu,
 			LeftMenu,
 			MainContent,
+			Landing,
+			Signup,
+			Signin,
 		}
 	}
 </script>
